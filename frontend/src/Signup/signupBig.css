@@ -1,0 +1,44 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center ;
+    /* background-color: #d0d1d3; */
+}
+.signup-header{
+    height: 10%;
+}
+.signup-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;  
+    border: 3px solid #5e7783;
+}
+
+#signup-form{
+    height: 60%;
+    /* background-color: #9e9199; */
+    border: 3px solid #5e7783;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: space-around;
+    align-items: center;
+}
+#signup-form>div{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 13px;
+    width: 100%;
+}
+#signup-form>div>input{
+    width: 80%;
+    border: 2px solid #9e9199;
+}
