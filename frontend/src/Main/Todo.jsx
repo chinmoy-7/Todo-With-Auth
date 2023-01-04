@@ -26,6 +26,12 @@ export default function Todo() {
   //Add task
   const addTask = async (e) => {
     setIsLoading(true);
+    if(task.description==""){
+      alert("Cannot add empty spaces");
+      setIsLoading(false)
+      return
+
+    }
     const headers = { authorization: localStorage.getItem("token") };
     const newTask = await axios.post("https://todo-a3mc.onrender.com/api/add", task, {
       headers,
@@ -69,6 +75,12 @@ export default function Todo() {
   }
   const confirmEdit=async()=>{
     console.log(editTask)
+    if(editTask.description==""){
+      alert("Cannot add empty spaces");
+      setIsLoading(false)
+      return
+
+    }
     const headers = {"authorization":localStorage.getItem("token")}
     const edit=await axios.put(`https://todo-a3mc.onrender.com/api/edit`,{editTask},{headers})
     // console.log(edit.data.message)
