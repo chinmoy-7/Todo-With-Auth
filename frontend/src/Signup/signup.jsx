@@ -1,8 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "./signupBig.css";
+import { useNavigate } from "react-router-dom";
 import "./signup.css";
 export default function Signup() {
+    const navigate = useNavigate()
     const [signup,setSignup]=useState({username:"",email:"",password:"",confirmPassword:""})
     const [loading,setLoading] = useState(false);
     const handleSignup=async (e)=>{
@@ -26,13 +28,14 @@ export default function Signup() {
 
             //Server Work
             setLoading(true)
-            const newUser = await axios.post("http://localhost:3004/api/signup",signup)
+            const newUser = await axios.post("https://todo-a3mc.onrender.com/api/signup",signup)
             if(newUser.data.status=="failed"){
                 alert("User already Exists");
                 return
             }
 
             alert("Registered Successfully");
+            navigate("/",{replace:true})
             console.log(newUser)
         }catch(e){
             console.log(e)

@@ -27,7 +27,7 @@ export default function Todo() {
   const addTask = async (e) => {
     setIsLoading(true);
     const headers = { authorization: localStorage.getItem("token") };
-    const newTask = await axios.post("http://localhost:3004/api/add", task, {
+    const newTask = await axios.post("https://todo-a3mc.onrender.com/api/add", task, {
       headers,
     });
     setIsLoading(false);
@@ -38,7 +38,7 @@ export default function Todo() {
   const getAllTask = async () => {
     setIsLoading(true);
     const headers = { authorization: localStorage.getItem("token") };
-    const tasks = await axios.get("http://localhost:3004/api/tasks", {
+    const tasks = await axios.get("https://todo-a3mc.onrender.com/api/tasks", {
       headers,
     });
     setIsLoading(false);
@@ -56,7 +56,7 @@ export default function Todo() {
   const handleDelete=async (_id)=>{
     // console.log(_id)
     const headers = { authorization: localStorage.getItem("token") };
-    await axios.delete(`http://localhost:3004/api/delete/${_id}`,{headers})
+    await axios.delete(`https://todo-a3mc.onrender.com/api/delete/${_id}`,{headers})
     setTaskAdded(!taskAdded)
   }
 
@@ -70,7 +70,7 @@ export default function Todo() {
   const confirmEdit=async()=>{
     console.log(editTask)
     const headers = {"authorization":localStorage.getItem("token")}
-    const edit=await axios.put(`http://localhost:3004/api/edit`,{editTask},{headers})
+    const edit=await axios.put(`https://todo-a3mc.onrender.com/api/edit`,{editTask},{headers})
     // console.log(edit.data.message)
     setEditTask({description:""})
     setCanEdit(false)

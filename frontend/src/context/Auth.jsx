@@ -25,7 +25,7 @@ export const AuthContextProvider = ({children})=>{
 
             //Server Work
             setLoading(true)
-            const user = await axios.post("http://localhost:3004/api/login",login)
+            const user = await axios.post("https://todo-a3mc.onrender.com/api/login",login)
 
             if(user.data.status=="success"){
                 alert("Login Successfull");
