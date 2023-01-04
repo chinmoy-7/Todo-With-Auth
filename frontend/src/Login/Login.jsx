@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import {useNavigate}  from 'react-router-dom'
 import { useAuth } from "../context/Auth";
 import "./loginBig.css";
+import "./login.css";
 export default function Login() {
     const auth = useAuth()
   return (
@@ -14,7 +15,7 @@ export default function Login() {
       </div>
       <div className="login-content">
         <form action="" id="login-form">
-        <h1>Login Form</h1>
+        <h1 >LOGIN FORM</h1>
           <div>
             <input type="text" className="form-control" placeholder="Email" onChange={(e)=>{auth.setlogin({...auth.login,email:e.target.value})}}/>
           </div>

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "./signupBig.css";
+import "./signup.css";
 export default function Signup() {
     const [signup,setSignup]=useState({username:"",email:"",password:"",confirmPassword:""})
     const [loading,setLoading] = useState(false);

@@ -26,6 +26,7 @@ export const AuthContextProvider = ({children})=>{
             //Server Work
             setLoading(true)
             const user = await axios.post("http://localhost:3004/api/login",login)
+
             if(user.data.status=="success"){
                 alert("Login Successfull");
                 window.localStorage.setItem("token",user.data.token)
@@ -43,7 +44,7 @@ export const AuthContextProvider = ({children})=>{
         }
     }
     return(
-            <AuthContext.Provider value={{handlelogin,setlogin,login,setLoading,loading}}>
+            <AuthContext.Provider value={{handlelogin,setIsLogin,login,setLoading,loading,setlogin}}>
             {children}
         </AuthContext.Provider>
     )

@@ -13,7 +13,7 @@
 }
 .todo-header{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     color:white;
     width: 100%;
@@ -51,7 +51,7 @@
     /* background-color: red; */
 }
 .tasks{
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
@@ -69,6 +69,7 @@
 }
 .tasks-middle{
     width: 80%;
+    margin-left: 5px;
     /* height: 30px; */
     /* background-color: blue; */
 }
@@ -82,4 +83,8 @@
 }
 .tasks-right>img{
     cursor: pointer;
+}
+
+.edit{
+    display: flex;
 }

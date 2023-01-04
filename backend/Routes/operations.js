@@ -29,4 +29,54 @@ router.post("/api/add",Auth,async (req,res)=>{
     }
 })
 
+//Get all Task
+router.get("/api/tasks",Auth,async(req,res)=>{
+    try{
+        const allTasks = await task.find({userId:res.user_id})
+        res.json(allTasks)
+    }catch(e){
+        res.json({
+            status:"failed",
+            message:e.message
+        })
+    }
+})
+
+//Delete Task
+router.delete("/api/delete/:id",Auth,async (req,res)=>{
+    try{
+            const {id}=req.params
+        await task.deleteOne({_id:id})
+        res.json({
+            status:"success"
+        })
+    }catch(e){
+        res.json({
+            status:"failed",
+            message:e.message
+        })
+    }
+})
+
+//Edit a Task
+router.put("/api/edit",Auth,async(req,res)=>{
+    try{
+
+        const {description,id}=req.body.editTask
+        await task.updateOne({_id:id},{
+            _id:id,
+            description:description
+        })
+
+        res.json({
+            status:"success"
+        })
+    }catch(e){
+        res.json({
+            status:"failed",
+            message:e.message
+        })
+    }
+})
+
 module.exports = router;

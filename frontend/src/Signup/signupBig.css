@@ -8,7 +8,10 @@
     /* background-color: #d0d1d3; */
 }
 .signup-header{
+    text-align: center;
+    width: 100%;
     height: 10%;
+    background-color: lightblue;
 }
 .signup-content{
     display: flex;
@@ -23,6 +26,7 @@
 #signup-form{
     height: 60%;
     /* background-color: #9e9199; */
+    background-color: #ddd2d9;
     border: 3px solid #5e7783;
     display: flex;
     flex-direction: column;
