@@ -1,0 +1,85 @@
+.todo-container{
+    height: 100vh;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-box{
+    height: 70%;
+    width: 30%;
+    overflow-y:auto;
+    background-color: white;
+}
+.todo-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    width: 100%;
+    height: 10%;
+    background-color: #AF7EEB;
+}
+.container-margin{
+    margin:20px 60px;
+}
+.todo-tasks{
+
+    /* min-height: 80%; */
+    /* background-color: red;    */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.add-todo>input{
+    border: 2px solid #AF7EEB;
+    margin-right: 5px;
+}
+.add-todo{
+    width: 100%;
+    height: 10%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.tasks-container{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+}
+.tasks{
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start ;
+    margin-top: 10px;
+    width: 100%;
+    /* min-height: 40px; */
+    /* height: 100%; */
+    /* background-color: green; */
+}
+.tasks-left{
+    width: 5%;
+    height: 30px;
+    /* background-color: red; */
+}
+.tasks-middle{
+    width: 80%;
+    /* height: 30px; */
+    /* background-color: blue; */
+}
+.tasks-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    height: 30px;
+    /* background-color: green; */
+}
+.tasks-right>img{
+    cursor: pointer;
+}
